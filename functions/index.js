@@ -78,7 +78,7 @@ exports.listCoins = functions.https.onRequest((req, res) => {
 // Firebase Project ID and Service Account Key.
 const gcs = storage({
     projectId: 'cryptofolio-f4d85',
-    keyFilename: './serviceAccountKey.json'
+    keyFilename: './cryptofolio-f4d85-firebase-adminsdk-8svlm-24464369ad.json'
 });
 
 const bucket = gcs.bucket('cryptofolio-f4d85.appspot.com');
@@ -123,7 +123,7 @@ function saveImage(url) {
 }
 
 exports.getProcessedImage = functions.https.onRequest((req, res) => {
-    console.log(req.body.processedImageURL);
+
     /*
      if (req.body && req.body.processedImageURL) {
 
